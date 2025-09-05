@@ -2,6 +2,7 @@ import React from 'react';
 import Swal from 'sweetalert2';
 import { updateAdoptionRequest } from '../services/apiService';
 import { useAuth } from '../context/AuthContext';
+import { toastSuccess,toastError } from '../utils/toastConfig';
 
 const SolicitudDetalleModal = ({ solicitud, onClose, onStatusChange }) => {
   const { user } = useAuth();
@@ -23,14 +24,17 @@ const SolicitudDetalleModal = ({ solicitud, onClose, onStatusChange }) => {
     if (!result.isConfirmed) return;
 
     try {
-      await updateAdoptionRequest(solicitud._id, nuevoEstado);
-      Swal.fire('Actualizado', `Solicitud ${nuevoEstado}.`, 'success');
-      onStatusChange(solicitud._id, nuevoEstado);
-      onClose();
-    } catch (err) {
-      console.error("Error al actualizar:", err);
-      Swal.fire('Error', 'No se pudo actualizar la solicitud.', 'error');
-    }
+        console.log("📤 Enviando solicitud de adopción:", { id: solicitud._id, nuevoEstado });
+        await updateAdoptionRequest(solicitud._id, nuevoEstado);
+        toastSuccess("Solicitud actualizada");
+        onStatusChange(solicitud._id, nuevoEstado);
+        onClose();
+      } catch (err) {
+          console.error("❌ Error completo:", err);
+          console.error("❌ Respuesta del backend:", err.response);
+          console.error("❌ Mensaje del backend:", err.response?.data?.message);
+          Swal.fire('Error', err.response?.data?.message || 'No se pudo actualizar la solicitud.', 'error');
+        }
   };
 
   return (
