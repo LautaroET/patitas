@@ -34,6 +34,7 @@ import Donaciones from '../pages/Donaciones';
 import Voluntariado from '../pages/Voluntariado';
 import Sumate from '../pages/Sumate';
 import Cuidados from '../pages/Cuidados'
+import MisSolicitudesDarEnAdopcion from '../pages/MisSolicitudesDarEnAdopcion';
 
 function AppRouter() {
   return (
@@ -61,6 +62,7 @@ function AppRouter() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/donaciones" element={<Donaciones />} />
       <Route path="/voluntariado" element={<Voluntariado />} />
+      
 
       {/* ✅ Protegidas por permisos */}
       <Route
@@ -129,6 +131,15 @@ function AppRouter() {
         element={
           <PermissionRoute permission="solicitudes:adopcion:listRefuge">
             <SolicitudesParaMiRefugio />
+          </PermissionRoute>
+        }
+      />
+
+      <Route
+        path="/mis-solicitudes-dar-en-adopcion"
+        element={
+          <PermissionRoute permission="solicitudes:dar:listOwn">
+            <MisSolicitudesDarEnAdopcion />
           </PermissionRoute>
         }
       />

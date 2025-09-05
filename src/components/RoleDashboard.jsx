@@ -8,17 +8,25 @@ const RoleDashboard = ({ user }) => {
   if (!rol) return <p className="text-gray-600 dark:text-gray-300">Rol no definido.</p>;
 
   switch (rol) {
-    case 'comun':
+      case 'comun':
       return (
         <div>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Acciones de Usuario</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Aquí podrás ver tus mascotas favoritas pronto.</p>
-          <button
-            onClick={() => navigate('/mis-solicitudes-adopcion')}
-            className="w-full sm:w-auto px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
-          >
-            Ver mis solicitudes de adopción
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Aquí podrás ver tus solicitudes enviadas.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={() => navigate('/mis-solicitudes-adopcion')}
+              className="w-full sm:w-auto px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition"
+            >
+              Ver mis solicitudes para dar en adopción
           </button>
+            <button
+              onClick={() => navigate('/mis-solicitudes-dar-en-adopcion')}
+              className="w-full sm:w-auto px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition"
+            >
+              Ver mis solicitudes para dar en adopción
+            </button>
+          </div>
         </div>
       );
 
