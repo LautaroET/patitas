@@ -15,7 +15,7 @@ const RoleDashboard = ({ user }) => {
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Acciones de Usuario</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Aquí podrás ver tus mascotas favoritas pronto.</p>
           <button
-            onClick={() => navigate('/mascotas')}
+            onClick={() => navigate('/mis-solicitudes-adopcion')}
             className="w-full sm:w-auto px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
           >
             Ver mis solicitudes de adopción
