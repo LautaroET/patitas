@@ -1,5 +1,11 @@
 # 🐾 Patitas al Rescate – Frontend
 
+https://patitasrescate.netlify.app/ frontend
+
+https://final-backend-msfy.onrender.com backend
+
+https://github.com/LautaroET/patitas-backend
+
 Proyecto **React + Vite + Tailwind** que conecta mascotas en adopción con futuros hogares.  
 Stack: React 18, React Router 6, Context API, Axios, Yup + React-Hook-Form, Toastify, SweetAlert2, Tailwind CSS 3 (dark-mode nativo).
 
