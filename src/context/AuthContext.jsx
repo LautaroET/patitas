@@ -44,6 +44,10 @@ export const AuthProvider = ({ children }) => {
       sessionStorage.setItem('user', JSON.stringify(userWithRole));
       api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
+      if (userWithRole.role === 'refugio') {
+      await loadRefugioId();
+    }
+
       return { token, user: userWithRole };
     } catch (err) {
       console.error('Login error', err);
@@ -110,9 +114,21 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  /* --------------------- cargar y guardar refugioId -------------------- */
+const loadRefugioId = async () => {
+  if (!user || user.role !== 'refugio') return;
+  try {
+    const { data } = await api.get('/api/refugios/yo/mi');
+    sessionStorage.setItem('refugioId', data._id);
+  } catch (err) {
+    console.warn('No se pudo obtener refugioId:', err);
+    sessionStorage.removeItem('refugioId');
+  }
+};
+
   /* ------------------------------------------------------------------ */
   return (
-    <AuthContext.Provider value={{ user, login, logout, register, refreshUser }}>
+    <AuthContext.Provider value={{ user, login, logout, register, refreshUser,loadRefugioId }}>
       {children}
     </AuthContext.Provider>
   );
