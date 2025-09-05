@@ -1,5 +1,3 @@
-// src/components/RefugioCard.jsx
-
 import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
 import { FavoritosContext } from "../context/FavoritosContext";

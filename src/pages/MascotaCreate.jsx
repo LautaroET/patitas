@@ -1,4 +1,3 @@
-// src/pages/MascotaCreate.jsx
 import React from 'react';
 import MascotaCreateForm from '../components/MascotaCreateForm';
 import { createMascota } from '../services/apiService';

@@ -1,4 +1,3 @@
-// src/components/MascotaEditForm.jsx
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -8,7 +7,7 @@ import { getMascotaById, fetchRefugioById } from '../services/apiService';
 import { useParams } from 'react-router-dom';
 import Loader from './Loader';
 
-// Esquema según TU backend
+
 const schema = yup.object().shape({
   nombre: yup.string().required('El nombre es obligatorio'),
   raza: yup.string().required('La raza es obligatoria'),

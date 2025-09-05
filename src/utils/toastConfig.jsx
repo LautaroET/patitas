@@ -1,4 +1,3 @@
-// src/utils/toastConfig.js
 import React, { useEffect } from 'react';
 import { toast, Slide } from 'react-toastify';
 

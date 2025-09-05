@@ -1,4 +1,3 @@
-// src/pages/MascotaEdit.jsx
 import React from 'react';
 import MascotaEditForm from '../components/MascotaEditForm';
 import { updateMascota } from '../services/apiService';

@@ -4,7 +4,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import Button from './Button'; 
 
-// src/components/RefugioCreateForm.jsx
 const schema = yup.object().shape({
   nombre:        yup.string().required('El nombre es obligatorio'),
   direccion:     yup.string().required('La dirección es obligatoria'),

@@ -1,5 +1,3 @@
-// src/components/FavoritesModal.jsx
-
 import React, { useContext, useState, useEffect } from "react";
 import { FavoritosContext } from "../context/FavoritosContext";
 import { Link } from "react-router-dom"; // Importar Link para que los elementos sean clicables

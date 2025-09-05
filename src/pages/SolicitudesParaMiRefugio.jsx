@@ -1,4 +1,3 @@
-// src/pages/SolicitudesParaMiRefugio.jsx
 import React, { useEffect, useState } from 'react';
 import { getAdoptionRequestsByRefugio } from '../services/apiService';
 import Loader from '../components/Loader';

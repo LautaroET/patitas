@@ -1,5 +1,3 @@
-// src/components/MascotaCard.jsx
-
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FavoritosContext } from '../context/FavoritosContext';

@@ -1,4 +1,3 @@
-// src/pages/SolicitudesRefugioDarEnAdopcion.jsx
 import React, { useEffect, useState } from 'react';
 import { getGiveAdoptionRequestsByRefugio, updateGiveAdoptionRequest } from '../services/apiService';
 import Loader from '../components/Loader';

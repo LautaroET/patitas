@@ -14,7 +14,7 @@ Stack: React 18, React Router 6, Context API, Axios, Yup + React-Hook-Form, Toas
 ## 📦 Instalación
 
 ```bash
-git clone https://github.com/tu-usuario/patitas-frontend.git
+git clone https://github.com/tu-usuario/patitas.git
 cd patitas-frontend
 npm install
 

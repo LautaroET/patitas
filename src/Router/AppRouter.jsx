@@ -1,4 +1,3 @@
-// src/router/AppRouter.jsx
 import { Routes, Route } from 'react-router-dom';
 import PermissionRoute from '../components/PermissionRoute';
 import ProtectedRoute from '../components/ProtectedRoute';

@@ -1,4 +1,3 @@
-// src/pages/MisSolicitudesAdopcion.jsx
 import React, { useEffect, useState } from 'react';
 import { getAdoptionRequestsByUser } from '../services/apiService';
 import Loader from '../components/Loader';
