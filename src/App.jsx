@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import MeowFactFooter from './components/MeowFactFooter';
 import FavoritesModal from "./components/FavoritesModal";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -32,7 +32,7 @@ function App() {
                 <AppRouter/>
               </main>
               {isModalOpen && <FavoritesModal onClose={toggleModal} />}
-              <Footer />
+              <MeowFactFooter />
               <ToastContainer position="bottom-right" theme="colored" />
             </div>
           </FavoritosProvider>

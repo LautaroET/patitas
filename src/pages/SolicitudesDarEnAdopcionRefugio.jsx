@@ -30,6 +30,7 @@ const SolicitudesDarEnAdopcionRefugio = () => {
   const historial = solicitudes.filter((s) => s.estado !== 'pendiente');
 
   const handleEstado = async (id, estado) => {
+    console.log('📤 Enviando solicitud:', { id, estado });
   const result = await Swal.fire({
     title: `¿Marcar como ${estado}?`,
     text: 'Esta acción no se puede deshacer.',
@@ -48,6 +49,7 @@ const SolicitudesDarEnAdopcionRefugio = () => {
     fetchSolicitudes(); // 👈 recargar lista
   } catch (err) {
     console.error("Error al actualizar solicitud:", err);
+    console.error('❌ Error al actualizar:', err);  
     toastError(err?.message || 'No se pudo actualizar la solicitud');
   }
 };

@@ -79,7 +79,7 @@ export const getAdoptionRequestsByRefugio = () =>
   api.get('/api/solicitudes/adopcion/refugio');
 
 export const updateAdoptionRequest = (id, estado) =>
-  api.patch(`/api/solicitudes/adopcion/${id}`, { estado });
+  api.put(`/api/solicitudes/adopcion/${id}`, { estado });
 
 // Dar en adopción
 export const createGiveAdoptionRequest = (data) =>
@@ -92,6 +92,6 @@ export const getGiveAdoptionRequestsByRefugio = () =>
   api.get('/api/solicitudes/dar-en-adopcion/refugio');
 
 export const updateGiveAdoptionRequest = (id, estado) =>
-  api.patch(`/api/solicitudes/dar-en-adopcion/${id}`, { estado });
+  api.put(`/api/solicitudes/dar-en-adopcion/${id}`, { estado });
 
 export default api;
